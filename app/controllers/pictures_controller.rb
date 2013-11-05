@@ -4,7 +4,7 @@ def index
    @pictures = Picture.all
 end
 def show
-  @pictures = Picture.find(params[:id])
+  @picture = Picture.find(params[:id])
 end
 
   def new
