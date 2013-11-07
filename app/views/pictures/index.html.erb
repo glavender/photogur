@@ -8,6 +8,15 @@
   <% end %>
 </ul>
 
+<h1>Pictures posted more than 1 day ago (<%= Picture.created_before(1.day.ago).count %>)
+</h1>
+<ul>
+<% @oldest_pictures.each do |p| %>
+<li><%= p.title %></li>
+<% end %>
+</ul>
+<br>
+
 <% @pictures.each do |picture| %>
   <p><%= picture[:title] %>, <%= picture[:artist] %></p>
   <p><%= picture[:comment] %></p>
